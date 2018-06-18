@@ -1,50 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head> 
-	<title>phonebook</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-	<link rel="stylesheet" href="css/style.css" type="text/css">
-</head>
-<body onload="init()">
-	<h1>This is a phonebook application. You can enter, delete and search contacts.</h1>
-	<fieldset>
-		<legend>Add person</legend>
-		<form>
-			<table cellpadding="2" cellspacing="2" id="form">
-				<tr>
-					<td>first name</td>
-					<td><input type="text" id="workName"></td>
-				</tr>
-				<tr>
-				<td>last name</td>
-				<td><input type="text" id="lastname"></textarea></td>
-				</tr>
-				<tr>
-				<td>phone number</td>
-				<td><input type="text" id="phonenumber"></td>
-				</tr>
-				<tr>
-				<td>&nbsp</td>
-				<td><input type="button" value="Add" onclick="add()"></td>
-				</tr>
-			</table>
-		</form> 
-	</fieldset>
-	<br>
-	<div class="search-through">
-		<p>You can search through phonebook here:</p>
-		<input type="text" id="search">
-	</div>
-	<br>
-	 <div class="table-users">
-   <div class="header">Contacts</div>
-	<div id="result"></div>
-	</div>
-	<script type="text/javascript">
-		var db = openDatabase('phonebook', '1.0', 'Phonebook', '12000');
+var db = openDatabase('phonebook', '1.0', 'Phonebook', '12000');
 	function init(){
 		db.transaction( function(tx){
 			tx.executeSql('CREATE TABLE IF NOT EXISTS TBL_PHONEBOOK(ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, firstname TEXT NOT NULL, lastname TEXT, phonenumber TEXT NOT NULL)');
@@ -121,6 +75,3 @@
 
 		}
 	});
-	</script>
-</body>
-</html>
