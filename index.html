@@ -61,7 +61,7 @@
 				s += '<tr><th>ID</th><th>first name</th><th>last name</th><th>phone number</th><th>Options</th>';
 				for (var i = 0; i<n; i++) {
 					var tbl_phonebook = results.rows.item(i);
-					s += '<tr id="data">';
+					s += '<tr class="data">';
 					s += '<td>'+ tbl_phonebook.ID + '</td>';
 					s += '<td>'+ tbl_phonebook.firstname + '</td>';
 					s += '<td>'+ tbl_phonebook.lastname + '</td>';
@@ -101,7 +101,7 @@
 		});
 
 		function search_table(value){
-			$('#data').each(function(){
+			$('.data').each(function(){
 				var found = 'false';
 				$(this).each(function(){
 					if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
