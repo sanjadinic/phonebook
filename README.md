@@ -1,1 +1,0 @@
-***This is a phonebook application with sql database
