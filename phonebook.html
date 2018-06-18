@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>phonebook</title>
+	<meta name="viewport" content="width=device-width">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body onload="init()">
+	<h1>This is a phonebook application. You can enter, delete and search contacts.</h1>
+	<fieldset>
+		<legend>Add person</legend>
+		<form>
+			<table cellpadding="2" cellspacing="2">
+				<tr>
+					<td>first name</td>
+					<td><input type="text" id="workName"></td>
+				</tr>
+				<tr>
+				<td>last name</td>
+				<td><input type="text" id="lastname"></textarea></td>
+				</tr>
+				<tr>
+				<td>phone number</td>
+				<td><input type="text" id="phonenumber"></td>
+				</tr>
+				<tr>
+				<td>&nbsp</td>
+				<td><input type="button" value="Add" onclick="add()"></td>
+				</tr>
+			</table>
+		</form> 
+	</fieldset>
+	<br>
+	<hr>
+	<div>
+		<p>You can search through phonebook here:</p>
+		<input type="text" id="search">
+	</div>
+	<br>
+	<div id="result"></div>
+	
+<script type="text/javascript" src="phonebook.js">
+	
+</script>
+</body>
+</html>
